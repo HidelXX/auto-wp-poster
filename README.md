@@ -68,10 +68,15 @@ C:\caminho\para\os\arquivos
 
 Crie o arquivo .env
     
-    CHROMEDRIVER_PATH=C:/caminho/para/chromedriver.exe
-    EXCEL_PATH=C:/caminho/para/planilha.xlsx
-    WP_USERNAME=seu_usuario
-    WP_PASSWORD=sua_senha
+        CHROMEDRIVER_PATH=C:/caminho/para/chromedriver.exe
+        EXCEL_PATH=C:/caminho/para/planilhas/estoque.xlsx
+        IMAGENS_PATH=C:/caminho/para/imagens
+
+        WP_USERNAME=seu_usuario
+        WP_PASSWORD=sua_senha
+        WP_LOGIN_URL=https://seudominio.com.br/wp-admin/
+        WP_NOVA_POSTAGEM_URL=https://seudominio.com.br/wp-admin/post-new.php?post_type=produtos
+🔐 Importante: não inclua esse arquivo no GitHub. Ele deve estar no seu `.gitignore`.
 
 
 Instale as dependências:
