@@ -85,7 +85,7 @@ Instale as dependências:
 
  Configure o limite de produtos no config.py:
 
-    LIMITE_PRODUTOS = 100
+ex:    `LIMITE_PRODUTOS = 100`
 
 Execute o script principal:
 
