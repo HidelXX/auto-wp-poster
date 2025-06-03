@@ -37,16 +37,20 @@ Este projeto tem como objetivo automatizar a publicação de produtos no WordPre
 
 ## 📂 Estrutura do Projeto
 
-automacao_reffinato/
-├── main.py
-├── config.py
-├── utils_titulo.py
-├── scraping_img.py
-├── wordpress_post.py
-├── wordpress_login.py
-├── excel_loader.py
-├── .env
-└── README.md
+
+C:\Users\Admin\Desktop\automacao\Reffinato
+├── imagens/      ← onde as imagens são salvas
+├── planilhas/    ← onde está o Excel com os produtos
+└── script/       ← onde está o código Python do projeto
+        ├── main.py
+        ├── config.py
+        ├── utils_titulo.py
+        ├── scraping_img.py
+        ├── wordpress_post.py
+        ├── wordpress_login.py
+        ├── excel_loader.py
+        ├── .env
+        └── README.md
 
 
 ---
