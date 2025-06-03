@@ -38,7 +38,7 @@ Este projeto tem como objetivo automatizar a publicação de produtos no WordPre
 ## 📂 Estrutura do Projeto
 
 
-C:\Users\Admin\Desktop\automacao\Reffinato
+C:\caminho\para\os\arquivos
 ├── imagens/      ← onde as imagens são salvas
 ├── planilhas/    ← onde está o Excel com os produtos
 └── script/       ← onde está o código Python do projeto
