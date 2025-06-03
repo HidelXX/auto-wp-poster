@@ -4,7 +4,8 @@ from pathlib import Path
 
 def postar_produto(driver, wait, titulo_formatado, descricao, imagem_path, titulo_original):
     try:
-        driver.get("https://reffinato.com.br/wp-admin/post-new.php?post_type=produtos")
+        from config import WP_NOVA_POSTAGEM_URL
+        driver.get(WP_NOVA_POSTAGEM_URL)#link de onde adicona os pordutos 
 
         wait.until(EC.presence_of_element_located((By.ID, "title"))).send_keys(titulo_formatado)
         wait.until(EC.frame_to_be_available_and_switch_to_it((By.ID, "content_ifr")))

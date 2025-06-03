@@ -11,7 +11,8 @@ def iniciar_driver_e_login():
     driver = webdriver.Chrome(service=service, options=options)
     wait = WebDriverWait(driver, 15)
 
-    driver.get("https://reffinato.com.br/wp-admin/")
+    from config import WP_LOGIN_URL
+    driver.get(WP_LOGIN_URL)#link da pagina de login wordpress
     if "wp-login.php" in driver.current_url or "login" in driver.title.lower():
         try:
             wait.until(EC.presence_of_element_located((By.ID, "user_login"))).send_keys(config.WP_USERNAME)

@@ -1,5 +1,6 @@
 import re
 
+#essa formatação funcinou no meu contexto, altere para uma formatação que funcione no seu contexto de planilha
 def formatar_titulo_bruto(titulo: str) -> str:
     titulo = titulo.strip()
 

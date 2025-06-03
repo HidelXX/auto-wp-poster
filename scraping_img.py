@@ -25,7 +25,8 @@ def baixar_primeira_imagem_google(driver, termo_busca):
         header, base64_data = src.split(",", 1)
         image_data = base64.b64decode(base64_data)
 
-        pasta_destino = Path(r"C:\Users\Admin\Desktop\automacao\Reffinato\imagens")
+        from config import IMAGENS_PATH
+        pasta_destino = IMAGENS_PATH # pasta onde as imagens serão armazenadas localmente
         pasta_destino.mkdir(parents=True, exist_ok=True)
 
         nome_base = termo_busca.replace(' ', '_')
