@@ -39,6 +39,7 @@ Este projeto tem como objetivo automatizar a publicação de produtos no WordPre
 
 
 C:\caminho\para\os\arquivos
+
 ├── imagens/      ← onde as imagens são salvas
 
 ├── planilhas/    ← onde está o Excel com os produtos
