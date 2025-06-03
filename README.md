@@ -55,28 +55,28 @@ automacao_reffinato/
 
 1. **Clone o repositório:**
 
-``bash
-git clone https://github.com/HidelXX/automacao-reffinato.git
-cd automacao-reffinato
+        git clone https://github.com/HidelXX/automacao-reffinato.git
 
-    Crie o arquivo .env:
 
-CHROMEDRIVER_PATH=C:/caminho/para/chromedriver.exe
-EXCEL_PATH=C:/caminho/para/planilha.xlsx
-WP_USERNAME=seu_usuario
-WP_PASSWORD=sua_senha
+Crie o arquivo .env
+    
+    CHROMEDRIVER_PATH=C:/caminho/para/chromedriver.exe
+    EXCEL_PATH=C:/caminho/para/planilha.xlsx
+    WP_USERNAME=seu_usuario
+    WP_PASSWORD=sua_senha
 
-    Instale as dependências:
 
-pip install -r requirements.txt
+Instale as dependências:
 
-    Configure o limite de produtos no config.py:
+    pip install -r requirements.txt
 
-ex: LIMITE_PRODUTOS = 100
+ Configure o limite de produtos no config.py:
 
-    Execute o script principal:
+    LIMITE_PRODUTOS = 100
 
-python main.py
+Execute o script principal:
+
+    python main.py
 
 👨‍💻 Autor
 
