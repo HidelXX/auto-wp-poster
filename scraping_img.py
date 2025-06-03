@@ -1,7 +1,6 @@
 import time
 import base64
 import re
-from pathlib import Path
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
@@ -30,7 +29,7 @@ def baixar_primeira_imagem_google(driver, termo_busca):
         pasta_destino.mkdir(parents=True, exist_ok=True)
 
         nome_base = termo_busca.replace(' ', '_')
-        nome_base = re.sub(r'[<>:"/\\|?*]', '', nome_base)
+        nome_base = re.sub(r'[<>:"/\\|?*]', '', nome_base)#Evita erro ao baixar imagens
         nome_arquivo = f"{nome_base}.jpg"
         caminho = pasta_destino / nome_arquivo
 
