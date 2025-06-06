@@ -1,15 +1,32 @@
+from tqdm import tqdm
+from pathlib import Path
+import subprocess
 from config import EXCEL_PATH
-from scraping_img import baixar_primeira_imagem_google
-from utils_titulo import formatar_titulo_bruto
-from wordpress_login import iniciar_driver_e_login
-from wordpress_post import postar_produto
-from excel_loader import carregar_dados
+from utils import (
+    iniciar_driver_e_login,
+    carregar_dados,
+    formatar_titulo_bruto,
+    baixar_primeira_imagem_google,
+    postar_produto,
+)
+
+def verificar_e_criar_estrutura():
+    estrutura_criada = Path("estrutura.criada")
+
+    if not estrutura_criada.exists():
+        print("[!] Estrutura não encontrada. Executando setup.bat...")
+        subprocess.call(["script/setup.bat"], shell=True)
+
+        estrutura_criada.touch()
+        print("[✓] Setup inicial concluído.")
+
+verificar_e_criar_estrutura()
 
 def main():
     df = carregar_dados(EXCEL_PATH)
     driver, wait = iniciar_driver_e_login()
 
-    for _, row in df.iterrows():
+    for _, row in tqdm(df.iterrows(), total=len(df), desc="Postando produtos"):
         titulo_original = row['Titulo']
         descricao = row['Descrição']
         titulo_formatado = formatar_titulo_bruto(titulo_original)

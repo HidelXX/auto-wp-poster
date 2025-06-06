@@ -48,11 +48,7 @@ C:\caminho\para\os\arquivos
 
         ├── main.py
         ├── config.py
-        ├── utils_titulo.py
-        ├── scraping_img.py
-        ├── wordpress_post.py
-        ├── wordpress_login.py
-        ├── excel_loader.py
+        ├── utils.py
         ├── .env
         └── README.md
 
